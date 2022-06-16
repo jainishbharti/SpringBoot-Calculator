@@ -18,7 +18,8 @@ public class Operations {
     }
 
     public double divide(Double a, Double b){
-        return (double) a/b;
+        if(b == 0.0) throw new ArithmeticException("Division by 0 is not allowed");
+        else return (double) a/b;
     }
 
 

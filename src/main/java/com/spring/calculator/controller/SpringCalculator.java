@@ -10,8 +10,13 @@ import java.util.Map;
 
 @RestController
 public class SpringCalculator {
-    @Autowired
+
     Operations operation;
+
+    @Autowired
+    public SpringCalculator(Operations operation) {
+        this.operation = operation;
+    }
 
     @RequestMapping("/add")
     public Double add(@RequestHeader Map<String, String> map){
